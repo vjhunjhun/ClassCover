@@ -6,3 +6,7 @@ Functionality which will be added later:
 .Search and filter options for subjects, teachers, or time slots.
 .Admin dashboard to manage all users and classes.
 .Analytics or reports showing most claimed classes or teachers.
+.Responsive design improvements for mobile users.
+.Fixing existing UI bugs for a smoother user experience.
+
+
