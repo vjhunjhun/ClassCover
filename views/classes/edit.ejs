@@ -1,0 +1,52 @@
+<%layout("/layouts/boilerplate.ejs")%>
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <h3>Edit Class</h3>
+            <form action="/classes/<%=c._id%>?_method=put" method="post" novalidate class="needs-validation">
+
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="c[subject]" value="<%=c.subject%>" class="form-control" required>
+                    <div class="valid-feedback">Subject is okay.</div>
+                    <div class="invalid-feedback">Please enter a valid subject.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="originalTeacher" class="form-label">Assigned Teacher</label>
+                    <input type="text" name="c[originalTeacher]" value="<%=c.originalTeacher%>" class="form-control" required></input>
+                     <div class="invalid-feedback">enter correct name.</div>
+                </div>
+                  <div class="mb-3">
+                    <label for="time" class="form-label">Time</label>
+                    <input type="text" name="c[time]" value="<%=c.time%>" class="form-control" required> 
+                    <div class="invalid-feedback">enter a valid time.</div>
+               </div>
+               <div class="mb-3">
+                    <label for="room" class="form-label">Room</label>
+                    <input type="text" name="c[room]" value="<%=c.room%>" class="form-control" required>
+                    <div class="invalid-feedback">enter a valid room no.</div>
+               </div>
+               <div class="row">
+                   <div class="mb-3 col-md-4">
+                        <label for="status" class="form-label">Status</label>
+                        <select name="c[status]" id="status" class="form-select" required>
+    <option value="">-- Select Status --</option>
+    <option value="open" <%= c.status === "open" ? "selected" : "" %>>Open</option>
+    <option value="claimed" <%= c.status === "claimed" ? "selected" : "" %>>Claimed</option>
+    <option value="completed" <%= c.status === "completed" ? "selected" : "" %>>Completed</option>
+    <option value="cancelled" <%= c.status === "cancelled" ? "selected" : "" %>>Cancelled</option>
+  </select>
+                  <div class="invalid-feedback">Please select an option.</div>
+                </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="claimedBy" class="form-label">Claimed by</label>
+                        <input type="text" name="c[claimedBy]" value="<%=c.claimedBy%>" class="form-control" placeholder="Leave empty if not claimed">
+                        <div class="invalid-feedback">Please enter a correct name.</div>
+                    </div>
+                </div>
+                <button class="btn btn-dark edit-btn mt-3">Edit</button>
+            </form>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>

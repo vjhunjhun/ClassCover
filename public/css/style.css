@@ -1,0 +1,84 @@
+body{
+    font-family: "Plus Jakarta Sans",sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-graduation-cap{
+    color: rgb(166, 208, 238);
+    font-size: 2rem;
+}
+ .nav-link{
+    color: #222222 !important;
+ }
+  .f-info-links a{
+text-decoration: none;
+color: #222222;
+
+ }
+  .f-info-links a:hover{
+text-decoration: underline;
+color: #222222;
+ }
+ .f-info-brand,.f-info-socials,.f-info-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+ }
+ .f-info-socials i{
+     font-size: 1.2rem;
+    margin-right: 1rem;
+ }
+ .f-info{
+    text-align:center ;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+ }
+ .container{
+    flex:1;
+ }
+ .card{
+   margin-bottom: 2rem;
+ }
+ .card-time{
+   font-weight: 600 !important;
+ }
+ .classes-link{
+   text-decoration: none;
+ }
+  /*card style*/
+ .card-img-overlay{
+    opacity: 0;
+ }
+  .card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+ }
+ /* show page */
+ .btns{
+   display: flex;
+ }
+ .show-card{
+   padding-left: 0;
+   padding-right: 0;
+ }
+ .edit-btn{
+   background-color: #3b7f9e !important;
+    border: none !important;
+ }
+ .add-btn{
+    background-color: #3b7f9e !important;
+    border: none !important;
+ }
+ .fa-user{
+   font-size: 1.5rem;
+ }

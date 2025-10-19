@@ -1,0 +1,31 @@
+<%layout("/layouts/boilerplate")%>
+ <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <!-- Profile Card -->
+            <div class="card shadow">
+                <div class="card-body text-center">
+                    <img src="<%=reqUser.image.url%>" 
+                         class="rounded-circle mb-3" 
+                         alt="Profile Photo"
+                         width="150" 
+                         height="150">
+                    <h3 class="card-title"><%=reqUser.username%></h3>
+                    <p class="text-muted">User</p>
+                    <p class="card-text">------------------------------</p>
+                    
+                     <div class="d-flex justify-content-center gap-2 mt-3">
+                            <a href="/<%=reqUser._id%>/edit"><button class="btn btn-info">Edit</button></a>
+                        
+                        <!-- <button class="btn btn-primary">Follow</button>
+                        <button class="btn btn-outline-secondary">Message</button> -->
+                    </div> 
+                </div>
+                
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Email:</strong> <%=reqUser.email%></li>
+                    <!-- <li class="list-group-item"><strong>Location:</strong> New York, USA</li>
+                    <li class="list-group-item"><strong>Member Since:</strong> January 2024</li> -->
+                </ul>
+            </div>
+        </div>
+    </div>

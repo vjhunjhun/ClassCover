@@ -1,0 +1,54 @@
+<%layout("/layouts/boilerplate.ejs")%>
+<body>
+    <br>
+    <br>
+    <h3>New Class</h3>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+
+            <form action="/classes" method="post" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" name="c[subject]" placeholder="enter subject" class="form-control" required>
+                    <div class="valid-feedback">Subject is okay.</div>
+                    <div class="invalid-feedback">Subject name is required.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="originalTeacher" class="form-label">Teacher Assigned</label>
+                     <input type="text" name="c[originalTeacher]" placeholder="Name is required" class="form-control" required></input>
+                     <div class="invalid-feedback">Teacher name is required.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="time" class="form-label">Time</label>
+                    <input type="text" name="c[time]" placeholder="10AM-11AM" class="form-control" required>
+                    <div class="invalid-feedback">Please enter class Timings.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="room" class="form-label">Room</label>
+                   <input type="text" name="c[room]" placeholder="enter room no." class="form-control" required>
+                   <div class="invalid-feedback">Room no. is required</div>
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label">Status</label>
+                  <!-- <input type="text" name="c[status]" placeholder="enter status" class="form-control"> -->
+                  <select name="c[status]" id="status" class="form-select" required>
+                    <option value="">-- Select Status --</option>
+                    <option value="open">Open</option>
+                    <option value="claimed">Claimed</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                    </select>
+                  <div class="invalid-feedback">Please select an option.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="claimedBy" class="form-label">Claimed by</label>
+                 <input type="text" name="c[claimedBy]" placeholder="Leave empty if not claimed" class="form-control">
+                 <div class="invalid-feedback">Please enter a correct name.</div>
+                </div>
+                <button class="btn btn-dark add-btn mt-3">Add</button>
+            </form>
+        </div>
+    </div>
+    <br><br>
+    <script src="/js/script.js"></script>
+    </body>

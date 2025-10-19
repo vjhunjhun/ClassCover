@@ -1,0 +1,17 @@
+<%layout("/layouts/boilerplate.ejs")%>
+<div class="row mt-3">
+    <h3>Edit Profile</h3>
+    <form action="/<%=reqUser._id%>/?_method=put" method="post" novalidate class="needs-validation" enctype="multipart/form-data"> 
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Profile Image</label>
+        <input type="file" name="usr[image]" class="form-control">
+        </div>
+        <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" name="usr[email]" value="<%=reqUser.email%>" class="form-control" required>
+                    <div class="valid-feedback">Email is okay.</div>
+                    <div class="invalid-feedback">Please enter a valid Email.</div>
+                </div>
+                <button class="btn btn-primary">Submit</button>
+    </form>
+</div>

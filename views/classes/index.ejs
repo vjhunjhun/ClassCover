@@ -1,0 +1,22 @@
+<%layout("/layouts/boilerplate.ejs")%>
+<body>
+    <h3>All Classes</h3>
+    <!-- <form action="/classes/new" method="get">
+        <button>Add Class</button>
+    </form> -->
+    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+        
+        <%for(c of classes){%>
+            <a href="/classes/<%=c._id%>" class="classes-link">
+                <div class="card col" style="width: 18rem;">
+                    <div class="card-img-overlay"></div>
+                    <div class="card-body">
+                        <h5 class="card-title"><%=c.subject%></h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary card-time">Time:<%=c.time%></h6>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Status:<%=c.status%></h6>
+                    </div>
+                </div>
+            </a>
+                <%}%>
+        </div>
+</body>
